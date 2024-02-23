@@ -1,1 +1,17 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --main-font: "Inter-Variable";
+  --accent-font: "PressStart2P";
+  --title-font-weight: 700;
+  --text-font-weight: 400;
+  --bg-color: #ffffff;
+  --lable-color: #ffffff;
+  --accent-color: #000000;
+  --curtain-color: #ffffff;
+  --like-color: #000000;
+  --bg-gradient-color: #d3d3d3;
+  --bg-gradient-flow-top: #e7e7e7;
+  --bg-gradient-flow-bottom: #1a1a1a;
+  --page-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
+}

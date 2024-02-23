@@ -14,7 +14,318 @@
 
 */
 
+/* main */
+
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+  color: var(--accent-color);
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--bg-gradient-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      to top,
+      var(--bg-gradient-color) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--bg-gradient-flow-top) 0.01%,
+      var(--bg-gradient-flow-bottom)
+    );
+  background-size: cover;
+  font-variation-settings: "wght" var(--text-font-weight);
+}
+
+.page-width {
+  width: 100%;
+}
+
+/* header */
+.header {
+  height: clamp(327px, 100%, 368px);
+  margin-block-start: 100px;
+  margin-block-end: 100px;
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  background-color: var(--bg-color);
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block-start: clamp(120px, 10vw, 136px);
+}
+
+.header-title__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  margin: 25px 0;
+  padding-left: 20px;
+}
+
+.theme-menu__list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.theme-menu__button {
+  position: relative;
+  border: initial;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  background: initial;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.theme-menu__button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  left: -15px;
+  animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+/* main */
+
+.main__card-item {
+  margin-block-end: 50px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+}
+
+.main__card-title {
+  padding: 5px 10px 5px 10px;
+  font-weight: var(--title-font-weight);
+  font-size: 18px;
+  font-variation-settings: "wght" var(--title-font-weight);
+}
+
+/* card */
+
+.card-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.main__card-images {
+  width: 100%;
+  border-top: 2px solid var(--accent-color);
+}
+
+.main__card-lable {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px 25px;
+  opacity: 0.5;
+  color: var(--accent-color);
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-shadow: -1px -1px 0 var(--lable-color), 1px -1px 0 var(--lable-color),
+    -1px 1px 0 var(--lable-color), 1px 1px 0 var(--lable-color);
+  background-blend-mode: hard-light;
+}
+
+.main__card-text {
+  display: grid;
+  gap: 27px;
+  margin: 25px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.main__card-button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  gap: 7px;
+  padding: 0 25px 25px 0;
+  position: relative;
+}
+
+.card__like-button {
+  width: 130px;
+  height: 38px;
+  border: 2px solid var(--accent-color);
+  background-color: unset;
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+
+.card__icon-button {
+  border: none;
+  padding: initial;
+  background-color: var(--bg-color);
+  transition: outline 0.3s ease;
+  width: auto;
+  height: 34px;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: 2px solid var(--accent-color);
+}
+
+.main__card-button-text {
+  font-family: var(--accent-font);
+}
+
+/* footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-block-end: 100px;
+  font-family: var(--accent-font);
+  font-size: 14px;
+}
+
+.footer__button {
+  width: 306px;
+  height: 84px;
+  border: 2px solid var(--accent-color);
+  background-color: var(--bg-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.footer__button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+}
+
+.footer__button-images {
+  width: 28px;
+  height: 28px;
+}
+
+.footer__button-all {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.floppy {
+  color: var(--curtain-color);
+  mix-blend-mode: difference;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75;);
+}
+
+.dialog {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: repeat(2, 1fr);
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font);
+  width: 353px;
+  height: 191px;
+}
+
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.dialog .footer__button {
+  width: 100%;
+}
+
+@media (width > 376px) {
+  .footer__button-all {
+    flex-direction: row;
+  }
+
+  .page-width {
+    max-width: var(--page-width);
+  }
+
+  .footer__button {
+    flex-direction: row;
+    width: 335px;
+    height: 55px;
+  }
+
+  .footer__button-images {
+    width: 21px;
+    height: 21px;
+  }
+}
+
+@supports ((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .main__card-lable {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--lable-color);
+    text-stroke: 1px var(--lable-color);
+  }
 }
