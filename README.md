@@ -1,1 +1,1 @@
-git@github.com:ACajetan/zakrivayuschiy-teg-f.git
+https://github.com/ACajetan/zakrivayuschiy-teg-f.git
