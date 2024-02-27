@@ -110,12 +110,12 @@
   right: 0;
   bottom: 0;
   display: block;
-  inline-size: 100%;
-  block-size: 2px;
   background-color: var(--accent-color);
   transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
+  inline-size: 100%;
+  block-size: 2px;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -139,8 +139,8 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   position: absolute;
-  left: -15px;
   top: 0px;
+  left: -15px;
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
@@ -253,8 +253,8 @@
 }
 
 .like-icon {
-  width: 39px;
-  height: 36px;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .card__like-button {
@@ -282,8 +282,8 @@
 .button__text {
   position: relative;
   color: var(--curtain-color);
-  mix-blend-mode: difference;
   font-family: var(--accent-font);
+  mix-blend-mode: difference;
 }
 
 /* footer */
@@ -296,14 +296,14 @@
 }
 
 .footer__button {
-  inline-size: 306px;
-  block-size: 84px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  inline-size: 306px;
+  block-size: 84px;
 }
 
 .footer__button-images {
@@ -393,10 +393,6 @@
 }
 
 @media (width > 376px) {
-  .footer__button {
-    flex-direction: row;
-  }
-
   .page-width {
     max-width: var(--page-width);
   }
