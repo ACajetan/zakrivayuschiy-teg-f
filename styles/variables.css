@@ -1,17 +1,18 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-font: "Inter-Variable", sans-serif;
-  --accent-font: "PressStart2P", sans-serif;
-  --title-font-weight: 700;
-  --text-font-weight: 400;
-  --bg-color: #ffffff;
-  --lable-color: #ffffff;
-  --accent-color: #000000;
-  --curtain-color: #ffffff;
-  --like-color: #000000;
-  --bg-gradient-color: #d3d3d3;
-  --bg-gradient-flow-top: #e7e7e7;
-  --bg-gradient-flow-bottom: #1a1a1a;
+  --main-font: "Inter", sans-serif;
+  --accent-font: "PressStart2P", fantasy;
+  --title-font-weight: 785;
+  --text-font-weight: 465;
+  --bg-color: #000000;
+  --lable-color: #000000;
+  --accent-color: #00cc14;
+  --curtain-color: #00cc14;
+  --like-color: #00cc14;
+  --like-bg-color: rgb(255, 0, 0);
+  --bg-gradient-color: #000;
+  --bg-gradient-flow-top: #007f0c;
+  --bg-gradient-flow-bottom: #004306;
   --page-width: clamp(23.438rem, 30.516vw + 16.285rem, 43.75rem);
 }
