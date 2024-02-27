@@ -307,6 +307,7 @@
 }
 
 .footer__button-images {
+  mix-blend-mode: difference;
   inline-size: 28px;
   block-size: 28px;
 }
@@ -398,7 +399,6 @@
   }
 
   .card-lable {
-    top: 25px;
     right: 25px;
   }
 

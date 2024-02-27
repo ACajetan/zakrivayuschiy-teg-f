@@ -30,7 +30,7 @@
   opacity: 0;
 }
 
-.like-icon .countur {
+.like-icon .contour {
   fill: var(--like-color);
   transition: fill 0.1s linear;
 }
